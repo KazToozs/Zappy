@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <title>Serveur Zapunity</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.teal-red.min.css">
+    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/Chart.js"></script>
+
+
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body data-spy="scroll" data-offset="0" data-target="#theMenu">
+
+    <!-- Menu -->
+    <nav class="menu" id="theMenu">
+        <div class="menu-wrap">
+            <h1 class="logo"><a href="index.html#home">ZapUnity</a></h1>
+            <i class="icon-remove menu-close"></i>
+            <a href="/index.html#home" class="smoothScroll">Accueil</a>
+            <a href="/index.html#Environnement" class="smoothScroll">Environnement</a>
+            <a href="/index.html#about" class="smoothScroll">Equipe</a>
+            <a href="/index.html#contact" class="smoothScroll">Contact</a>
+            <a href="/item.html">Serveur</a>
+        </div>
+
+        <!-- Menu button -->
+        <div id="menuToggle"><i class="icon-reorder"></i></div>
+    </nav>
+
+
+
+    <!-- ========== HEADER SECTION ========== -->
+    <div id="moniwrap">
+        <div class="container">
+            <br>
+            <h1>Monitoring</h1>
+            <div class="mdl-grid">
+                <br>
+                <br>
+                <br>
+                <div class="col-lg-6 col-lg-offset-3">
+                </div>
+            </div>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /headerwrap -->
+
+    <!-- ========== SERVICES - GREY SECTION ========== -->
+    <div id="g">
+        <div class="container">
+            <div class="mdl-grid">
+                <h3>CONNEXION</h3>
+                <br>
+                <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield">
+                        <input class="ip mdl-textfield__input" type="text" id="sample2">
+                        <label class="mdl-textfield__label" for="sample2">IP</label>
+                    </div>
+                    <div class="mdl-cell mdl-cell--3-col  mdl-textfield mdl-js-textfield">
+                        <input class="port mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="sample3">
+                        <label class="mdl-textfield__label" for="sample3">Port</label>
+                        <span class="mdl-textfield__error">Input is not a number!</span>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-cell--12-col">
+                    <button id="connect" class="mdl-cell mdl-cell--3-col mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect">Connexion</button>
+                    <button id="disconnect" class="mdl-cell mdl-cell--3-col mdl-button mdl-button--raised mdl-button--accent mdl-js-button mdl-js-ripple-effect">Déconnexion</button>
+                </div>
+            </div>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /g -->
+
+    <!-- ========== CAROUSEL / DESCRIPTION - DARK GREY SECTION ========== -->
+    <div id="dg">
+        <div class="container">
+            <div class="mdl-grid">
+                <h3>LE JEU</h3>
+                <br>
+                <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--4-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+                        <input class="teamname mdl-textfield__input" value="test" type="text" readonly id="teamname" tabIndex="-1" />
+                        <label class="mdl-textfield__label" for="teamname">Equipe</label>
+                        <ul class="name mdl-menu mdl-menu--bottom-left mdl-js-menu" for="teamname">
+                        </ul>
+                    </div>
+                    <button id="ia" class="mdl-cell mdl-cell--3-col mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect">Lancer ia</button>
+                </div>
+                <div class="mdl-cell mdl-cell--12-col">
+                    <div class="mdl-cell mdl-cell--4-col  mdl-textfield mdl-js-textfield">
+                        <input class="time mdl-textfield__input" type="number" value="0" pattern="-?[0-9]*(\.[0-9]+)?" id="sample3">
+                        <label class="mdl-textfield__label" for="sample3">Temps</label>
+                        <span class="mdl-textfield__error">Input is not a number!</span>
+                    </div>
+                    <button id="time" class="mdl-cell mdl-cell--3-col mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect">Changer</button>
+                </div>
+            </div>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /dg -->
+    <!-- ========== SERVICES - GREY SECTION ========== -->
+    <div>
+        <div class="container">
+            <div class="mdl-grid">
+                <h3>Live :</h3>
+                <br>
+                <table class="mdl-cell mdl-cell--12-col mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
+                    <thead>
+                        <tr>
+                            <th>TeamName</th>
+                            <th>ID</th>
+                            <th>Position X</th>
+                            <th>Position Y</th>
+                            <th>Level</th>
+                            
+                            <th>Nourriture</th>
+                            <th>Linemate</th>
+                            <th>Deraumère</th>
+                            <th>Sibur</th>
+                            <th>Mendiane</th>
+                            <th>Phiras</th>
+                            <th>Thystame</th>
+                        </tr>
+                    </thead>
+                    <tbody id="PlayerTable">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ========== FOOTER SECTION ========== -->
+    <section id="contact" name="contact"></section>
+    <div id="f">
+        <div class="container">
+            <div class="mdl-grid">
+                <h3 class="mdl-cell mdl-cell--12-col"><b>CONTACTEZ NOUS</b></h3>
+                <br>
+                <div class="mdl-cell mdl-cell--12-col">
+                    <h3><b>Envoyez nous un mail:</b></h3>
+                    <h3>zapunity@gmail.com</h3>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /f -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/classie.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        
+        var ServerAddress = "127.0.0.1";//"149.202.217.87";
+        
+        function CallUpdate() {
+            $.get("http://" + ServerAddress +":1234/AskRefresh", function (ret) {
+                
+            });
+        }
+        
+        function UpdatePlayerList() {
+            $.get("http://" + ServerAddress +":1234/Players", function (ret) {
+                if (ret.Players != null) {
+                    ret.Players.forEach(UpdatePlayer);
+                }
+            });
+        }
+        
+        
+        function UpdatePlayer(Players, index) {
+            console.log(Players);
+            var PlayerRow = $("#Player_" + Players.id);
+            if (PlayerRow.html() == null && Players.Ressource[0] != 0) {
+                $("#PlayerTable").append('<tr id="Player_'+ Players.id +'">'
+                + '<td>'+ Players.TeamName +'</td>'
+                + '<td>'+ Players.id +'</td>'
+                + '<td>'+ Players.posX +'</td>'
+                + '<td>'+ Players.posY +'</td>'
+                + '<td>'+ Players.Level +'</td>'
+                + '<td>'+ Players.Ressource[0] +'</td>'
+                + '<td>'+ Players.Ressource[1] +'</td>'
+                + '<td>'+ Players.Ressource[2] +'</td>'
+                + '<td>'+ Players.Ressource[3] +'</td>'
+                + '<td>'+ Players.Ressource[4] +'</td>'
+                + '<td>'+ Players.Ressource[5] +'</td>'
+                + '<td>'+ Players.Ressource[6] +'</td>'
+                + '</tr>');
+            } else {
+                $($(PlayerRow).children()[2]).html(Players.posX);
+                $($(PlayerRow).children()[3]).html(Players.posY);
+                $($(PlayerRow).children()[4]).html(Players.Level);
+                $($(PlayerRow).children()[5]).html(Players.Ressource[0]);
+                $($(PlayerRow).children()[6]).html(Players.Ressource[1]);
+                $($(PlayerRow).children()[7]).html(Players.Ressource[2]);
+                $($(PlayerRow).children()[8]).html(Players.Ressource[3]);
+                $($(PlayerRow).children()[9]).html(Players.Ressource[4]);
+                $($(PlayerRow).children()[10]).html(Players.Ressource[5]);
+                $($(PlayerRow).children()[11]).html(Players.Ressource[6]);
+            }
+            if ($($(PlayerRow).children()[5]).html() == "0") {
+                var element = document.getElementById("Player_" + Players.id);
+                element.parentNode.removeChild(element);
+            }
+        }
+        
+        var count = 0;
+        
+        function LiveLoop() {
+            /* TODO_ACTION*/
+            //console.log("Passage");
+            if (count < 10) {
+                count++;
+            } else {
+                count = 0;
+                CallUpdate();
+            }
+            UpdatePlayerList();
+            setTimeout(LiveLoop, 300);
+        }
+
+
+        var test = function(param) {
+            $('.teamname').val($(param).html());
+        };
+        var update = function() {
+            $.get("http://" + ServerAddress +":1234/teamname", function(data) {
+                $('.teamname').val(data.TeamName[0]);
+                var x = 0;
+                while (x < data.TeamName.length) {
+                    $('.name').append('<li id="' + data.TeamName[x] + '" class="mdl-menu__item value="' + data.TeamName[x] + ' onclick=" test(' + data.TeamName[x] + ')"">' + data.TeamName[x] + '</li>');
+                    x++;
+                }
+            });
+            $.get("http://" + ServerAddress +":1234/GetTimeRefresh", function(data) {
+                $('.time').val(data.time);
+            });
+        };
+        $(document).ready(function() {
+            $('.teamname').val('Déconnecté');
+            $.get("http://" + ServerAddress +":1234/connect", function(data) {
+                if (data.ret === "Already connected") {
+                    update();
+                }
+            }, function () {
+                
+            });
+            LiveLoop();
+        });
+        $('#connect').click(function() {
+            if ($('.ip').val() && $('.port').val()) {
+                $.get("http://" + ServerAddress +":1234/connect", {
+                    ip: $('.ip').val(),
+                    port: $('.port').val()
+                }, function(data) {
+                    if (data.ret !== "Connected") {
+                        alert(data.ret);
+                    } else {
+                        setTimeout(update, 300);
+                        alert(data.ret.errno);
+                    }
+                });
+            } else {
+                alert("Mauvais paramètre pour la connexion");
+            }
+
+        });
+        $('#disconnect').click(function() {
+            $.get("http://" + ServerAddress +":1234/disconnect", function(data) {
+                alert(data.ret);
+            });
+        });
+        $('#ia').click(function() {
+            $.get("http://" + ServerAddress +":1234/Connectionargs", function(data) {
+                if ($('.teamname').val !== "Déconnecté") {
+                    var arg = '-n ' + $('.teamname').val() + ' -p ' + data.port + ' -h ' + data.ip;
+                    $.get("/startIA.php", function(ret) {
+                        alert('IA lancé: ' + ret);
+                    });
+                } else {
+                    alert("Problème d'argument");
+                }
+            });
+        });
+        $('#time').click(function() {
+            if ($('.time').val()) {
+                $.get("http://" + ServerAddress +":1234/SetTimeRefresh", {
+                    time: $('.time').val()
+                }, function(data) {
+                    alert(data.ret);
+                });
+            } else {
+                alert("Problème argument");
+            }
+
+        });
+    </script>
+</body>
+
+</html>

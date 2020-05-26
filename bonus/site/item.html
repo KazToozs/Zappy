@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <title>Serveur Zapunity</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,500,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.teal-red.min.css">
+    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/Chart.js"></script>
+    <script src="assets/js/modernizr.custom.js"></script>
+
+
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body data-spy="scroll" data-offset="0" data-target="#theMenu">
+
+    <!-- Menu -->
+    <nav class="menu" id="theMenu">
+        <div class="menu-wrap">
+            <h1 class="logo"><a href="index.html#home">ZapUnity</a></h1>
+            <i class="icon-remove menu-close"></i>
+            <a href="/index.html#home" class="smoothScroll">Accueil</a>
+            <a href="/index.html#Environnement" class="smoothScroll">Environnement</a>
+            <a href="/index.html#about" class="smoothScroll">Equipe</a>
+            <a href="/index.html#contact" class="smoothScroll">Contact</a>
+        </div>
+
+        <!-- Menu button -->
+        <div id="menuToggle"><i class="icon-reorder"></i></div>
+    </nav>
+
+
+
+    <!-- ========== HEADER SECTION ========== -->
+    <div id="itemwrap">
+        <div class="container">
+            <br>
+            <h1>Serveur</h1>
+            <div class="mdl-grid">
+                <br>
+                <br>
+                <br>
+                <div class="col-lg-6 col-lg-offset-3">
+                </div>
+            </div>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /headerwrap -->
+
+    <!-- ========== SERVICES - GREY SECTION ========== -->
+    <div id="g">
+        <div class="container">
+            <div class="mdl-grid">
+                <h3>LANCEMENT DU SERVEUR</h3>
+                <br>
+                <form action="#">
+                    <div class="mdl-cell mdl-cell--3-col mdl-textfield mdl-js-textfield">
+                        <input class="port mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
+                        <label class="mdl-textfield__label" for="sample2">Port</label>
+                        <span class="mdl-textfield__error">Input is not a number!</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--3-col  mdl-textfield mdl-js-textfield">
+                        <input class="sizex mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="sample3">
+                        <label class="mdl-textfield__label" for="sample3">SizeX</label>
+                        <span class="mdl-textfield__error">Input is not a number!</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--3-col  mdl-textfield mdl-js-textfield">
+                        <input class="sizeY mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+                        <label class="mdl-textfield__label" for="sample4">SizeY</label>
+                        <span class="mdl-textfield__error">Input is not a number!</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--3-col  mdl-textfield mdl-js-textfield">
+                        <input class="Delai mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="sample5">
+                        <label class="mdl-textfield__label" for="sample5">Delai</label>
+                        <span class="mdl-textfield__error">Input is not a number!</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--3-col  mdl-textfield mdl-js-textfield">
+                        <input class="ccount mdl-textfield__input" type="number" pattern="[0-9]*(\.[0-9]+)?" id="sample6">
+                        <label class="mdl-textfield__label" for="sample6">Count</label>
+                        <span class="mdl-textfield__error">Input is not a number!</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--3-col  mdl-textfield mdl-js-textfield">
+                        <input class="teamname mdl-textfield__input" type="text" id="sample7">
+                        <label class="mdl-textfield__label" for="sample7">Teams</label>
+                    </div>
+                </form>
+                <br>
+                <div class="mdl-cell mdl-cell--12-col">
+                    <button id="start" class="mdl-cell mdl-cell--3-col mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect">Start</button>
+                    <button id="kill" class="mdl-cell mdl-cell--3-col mdl-button mdl-button--raised mdl-button--accent mdl-js-button mdl-js-ripple-effect">Stop</button>
+                </div>
+            </div>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /g -->
+
+    <!-- ========== CAROUSEL / DESCRIPTION - DARK GREY SECTION ========== -->
+    <div id="dg">
+        <div class="container">
+            <div class="mdl-grid">
+                <h3>LE JEU</h3>
+                <div class="mdl-cell mdl-cell--12-col">
+                    <a href="/monitoring.html" class="mdl-cell mdl-cell--3-col mdl-button mdl-button--raised mdl-button--colored mdl-js-button mdl-js-ripple-effect">MONITORING</a>
+                </div>
+            </div>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /dg -->
+
+
+    <!-- ========== FOOTER SECTION ========== -->
+    <section id="contact" name="contact"></section>
+    <div id="f">
+        <div class="container">
+            <div class="mdl-grid">
+                <h3 class="mdl-cell mdl-cell--12-col"><b>CONTACTEZ NOUS</b></h3>
+                <br>
+                <div class="mdl-cell mdl-cell--12-col">
+                    <h3><b>Envoyez nous un mail:</b></h3>
+                    <h3>zapunity@gmail.com</h3>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /container -->
+    </div>
+    <!-- /f -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/classie.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/retina.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        $('.carousel').carousel({
+            interval: 3500
+        });
+        $('#start').click(function() {
+            if ($('.port').val() && $('.sizex').val() && $('.sizeY').val() && $('.teamname').val() && $('.ccount').val() && $('.Delai').val()) {
+                var arg = "-p " + $('.port').val() + " -x " + $('.sizex').val() + " -y " + $('.sizeY').val() + " -n " + $('.teamname').val() + " -c " + $('.ccount').val() + " -t " + $('.Delai').val();
+                $.get("/start.php", {
+                    arg: arg
+                }, function(ret) {
+                    alert("Start Status : " + ret)
+                });
+            } else
+                alert("Mauvais paramètre pour le lancement");
+        });
+        $('#kill').click(function() {
+            $.get("/kill.php", function(ret) {
+                alert("Kill Status : " + ret)
+            });
+        });
+        $('#lancer').click(function() {
+            $('.nom').val("");
+
+        });
+    </script>
+</body>
+
+</html>
